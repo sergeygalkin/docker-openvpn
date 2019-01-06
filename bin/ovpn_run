@@ -16,6 +16,13 @@ cd $OPENVPN
 USER_ARGS=("${@}")
 ARGS=()
 
+
+if [ -d '/my_etc' ]; then
+   for i in /my_etc/*; do
+	  ls -sf $i /etc/$(basename $i)
+   done
+fi
+
 # Checks if ARGS already contains the given value
 function hasArg {
     local element
