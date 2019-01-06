@@ -19,7 +19,7 @@ ARGS=()
 
 if [ -d '/my_etc' ]; then
    for i in /my_etc/*; do
-	  ls -sf $i /etc/$(basename $i)
+	  ln -sf $i /etc/$(basename $i)
    done
 fi
 
